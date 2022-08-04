@@ -1,114 +1,45 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Noto+Sans+KR:wght@300;400;700&family=Square+Peg&display=swap');
 /* Reset */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+
+/* Variable */
+:root {
+  /* font Family */
+  --font-title: 'Square Peg', cursive;
+  --font-main: 'Hi Melody', cursive;
+  --font-info: 'Noto Sans KR', sans-serif;
+  /* color */
+  --deep-green: #003700;
+  --white-color: #fff;
+  --black-color: #000;
+  --light-grey: #bbb;
+  --opacity-black: rgba(0, 0, 0, 0.737);
+  /* font weight */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-bold: 700;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-html {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-body {
-  line-height: 1;
+
+html {
+  /* font */
+  font-size: 100%;
+  /* overflow */
+  overflow-x: hidden;
 }
+
+body {
+  /* flex */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 ol,
 ul {
   list-style: none;
@@ -129,15 +60,13 @@ table {
   border-spacing: 0;
 }
 
-/* Variable */
-:root {
-  /* font Family */
-  --font-title: 'Square Peg', cursive;
-  --font-main: 'Hi Melody', cursive;
-  --font-info: 'Noto Sans KR', sans-serif;
+a {
+  text-decoration: none;
+}
 
-  /* font weight */
-  --weight-light: 300;
-  --weight-regular: 400;
-  --weight-bold: 700;
+.max-width {
+  /* max-width */
+  max-width: 1600px;
+  /* size */
+  width: 90%;
 }
