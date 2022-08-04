@@ -350,6 +350,8 @@
   width: 85%;
 }
 
+/* REPONSIVE */
+
 @media screen and (min-width: 767px) {
   /* Home 
   ===================================*/
