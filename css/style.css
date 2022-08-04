@@ -132,6 +132,7 @@
   position: relative;
   /* size */
   width: 100%;
+  height: 100vh;
   /* flex */
   display: flex;
   flex-direction: column;
@@ -252,7 +253,6 @@
   cursor: pointer;
   /* flex */
   display: flex;
-
   align-items: flex-start;
   /* z-index */
   z-index: 2;
@@ -445,9 +445,7 @@
 @media screen and (min-width: 1024px) {
   /* About
   =================================== */
-  #about {
-    padding: 150px 0;
-  }
+
   .about-contents {
     display: flex;
     flex-direction: row;
@@ -464,5 +462,26 @@
     font-size: 1.5rem;
     /* size */
     width: 40%;
+  }
+}
+
+/* Height */
+@media screen and (max-height: 772px) {
+  /* Scroll */
+  .scroll {
+    /* position */
+    position: relative;
+    top: -40px;
+    /* font */
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+    color: var(--white-color);
+    /* cursor */
+    cursor: pointer;
+    /* flex */
+    display: flex;
+    align-items: flex-start;
+    /* z-index */
+    z-index: 2;
   }
 }

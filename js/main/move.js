@@ -1,5 +1,6 @@
 const navMoveItem = document.querySelector('.mobile-nav-items');
 const navPcItemsList = document.querySelector('.nav-total-items');
+const scrollDownBtn = document.querySelector('.scroll');
 
 // Move Link
 navMoveItem.addEventListener('click', (event)=>{
@@ -8,6 +9,10 @@ navMoveItem.addEventListener('click', (event)=>{
 
 navPcItemsList.addEventListener('click', (event)=>{
     moveEvent(event)
+});
+
+scrollDownBtn.addEventListener('click', (event)=>{
+    scrollIntoView('#about');
 });
 
 
