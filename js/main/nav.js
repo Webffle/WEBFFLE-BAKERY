@@ -22,14 +22,20 @@ toggleBtn.addEventListener('click', ()=>{
 window.addEventListener('scroll',()=>{
     let scrollValue = window.scrollY;
     if(scrollValue >= 0){
+        // add
         navCircle[0].classList.add('now');
+        // Remove
         for(let i = 1; i < navCircle.length; i++ ){
             navCircle[i].classList.remove('now');
         }
     }
     if(scrollValue >= aboutPosition){
+        // add
         navCircle[1].classList.add('now');
+        // Remove
         navCircle[0].classList.remove('now');
+        navCircle[2].classList.remove('now');
+        navCircle[3].classList.remove('now');
     }
     console.log(scrollValue)
 });
