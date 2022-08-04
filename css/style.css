@@ -11,7 +11,8 @@
   display: none;
 }
 
-/* mobile nav */
+/* mobile nav 
+==================================================*/
 #mobile-nav {
   /* position */
   position: fixed;
@@ -124,7 +125,8 @@
   transform: translateY(-100px);
 }
 
-/* home */
+/* home 
+====================================================*/
 #home {
   /* position */
   position: relative;
@@ -158,8 +160,6 @@
   padding-top: 100px;
   padding-bottom: 100px;
   /* flex */
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   /* z-index */
@@ -303,8 +303,56 @@
   transform: rotate(90deg);
 }
 
+/* about
+======================================= */
+#about {
+  /* max-width */
+  max-width: 2000px;
+  /* size */
+  width: 100%;
+  /* padding */
+  padding: 100px 0;
+  /* margin */
+  margin: 0 auto;
+  /* flex */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-wrapper {
+  /* flex */
+  align-items: center;
+}
+.about-contents {
+  /* padding */
+  padding-top: 20px;
+  /* flex */
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+#about-svg {
+  /* size */
+  width: 95%;
+}
+
+.about-word {
+  /* font */
+  font-family: var(--font-main);
+  font-size: 1.2rem;
+  /* text */
+  text-align: justify;
+  /* padding */
+  padding-top: 20px;
+  padding-left: 10px;
+  /* size */
+  width: 85%;
+}
+
 @media screen and (min-width: 767px) {
-  /* Home */
+  /* Home 
+  ===================================*/
   #home-wrapper {
     padding-top: 200px;
     padding-bottom: 100px;
@@ -316,10 +364,17 @@
   .content a {
     width: 340px;
   }
+  /* About
+  ================================== */
+  #about-svg {
+    /* size */
+    width: 70%;
+  }
 }
 
 @media screen and (min-width: 940px) {
-  /* pc tablet nav */
+  /* pc tablet nav 
+  ==================================*/
   #nav {
     /* font */
     font-family: var(--font-main);
@@ -376,13 +431,38 @@
 
   .now {
     /* size */
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     /* background */
     background-color: var(--white-color);
   }
   #mobile-nav {
     /* display */
     display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* About
+  =================================== */
+  #about {
+    padding: 150px 0;
+  }
+  .about-contents {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  #about-svg {
+    /* size */
+    width: 50%;
+  }
+
+  .about-word {
+    /* font */
+    font-size: 1.5rem;
+    /* size */
+    width: 40%;
   }
 }

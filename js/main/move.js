@@ -1,5 +1,5 @@
-const navMoveItem = document.querySelector('.nav-item');
-const navPcItemsList = document.querySelector('.pc-nav-item');
+const navMoveItem = document.querySelector('.mobile-nav-items');
+const navPcItemsList = document.querySelector('.nav-total-items');
 
 // Move Link
 navMoveItem.addEventListener('click', (event)=>{

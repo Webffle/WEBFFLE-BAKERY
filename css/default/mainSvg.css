@@ -1,33 +1,33 @@
-svg path {
+#logo path {
   fill: transparent;
   animation: stroke 0.5s ease-in;
   animation-fill-mode: forwards;
 }
-svg path:nth-child(1) {
+#logo path:nth-child(1) {
   animation-delay: 0s;
 }
-svg path:nth-child(2) {
+#logo path:nth-child(2) {
   animation-delay: 0.3s;
 }
-svg path:nth-child(3) {
+#logo path:nth-child(3) {
   animation-delay: 0.5s;
 }
-svg path:nth-child(4) {
+#logo path:nth-child(4) {
   animation-delay: 1s;
 }
-svg path:nth-child(5) {
+#logo path:nth-child(5) {
   animation-delay: 1.3s;
 }
-svg path:nth-child(6) {
+#logo path:nth-child(6) {
   animation-delay: 1.5s;
 }
-svg path:nth-child(7) {
+#logo path:nth-child(7) {
   animation-delay: 2s;
 }
-svg path:nth-child(8) {
+#logo path:nth-child(8) {
   animation-delay: 2.3s;
 }
-svg path:nth-child(9) {
+#logo path:nth-child(9) {
   animation-delay: 2.5s;
 }
 

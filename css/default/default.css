@@ -34,6 +34,8 @@ html {
 }
 
 body {
+  /* backgorund */
+  background-color: var(--white-color);
   /* flex */
   display: flex;
   flex-direction: column;
@@ -69,4 +71,30 @@ a {
   max-width: 1600px;
   /* size */
   width: 90%;
+}
+
+.max-width,
+.contents-width {
+  /* flex */
+  display: flex;
+  flex-direction: column;
+}
+
+.contents-width {
+  /* max-width */
+  max-width: 1450px;
+  /* size */
+  width: 90%;
+}
+
+.title-style {
+  /* font */
+  font-family: var(--font-title);
+  font-size: 2.6rem;
+  /* size */
+  width: 100%;
+  /* padding */
+  padding-left: 20px;
+  /* border */
+  border-bottom: 2px solid var(--black-color);
 }
