@@ -4,8 +4,6 @@ const toggleBtn = document.querySelector('.toggle');
 const navItemsList = document.querySelectorAll('.nav-item');
 // PC TABLET Nav
 const navCircle = document.querySelectorAll('.circle');
-// POSITION
-const aboutPosition = 452;
 
 // event for  nav
 toggleBtn.addEventListener('click', ()=>{
@@ -17,25 +15,29 @@ toggleBtn.addEventListener('click', ()=>{
 
 
 // PC NAV
-
+// POSITION
+const aboutPosition = 452;
+const menuPosition = 1154;
 
 window.addEventListener('scroll',()=>{
     let scrollValue = window.scrollY;
     if(scrollValue >= 0){
-        // add
-        navCircle[0].classList.add('now');
-        // Remove
-        for(let i = 1; i < navCircle.length; i++ ){
-            navCircle[i].classList.remove('now');
-        }
+        navCircleNowToggle(0, 1, 2, 3);
     }
     if(scrollValue >= aboutPosition){
-        // add
-        navCircle[1].classList.add('now');
-        // Remove
-        navCircle[0].classList.remove('now');
-        navCircle[2].classList.remove('now');
-        navCircle[3].classList.remove('now');
+        navCircleNowToggle(1, 0, 2, 3);
+    }
+    if(scrollValue >= menuPosition){
+        navCircleNowToggle(2, 0, 1, 3);
     }
     console.log(scrollValue)
 });
+
+function navCircleNowToggle(now, delete1, delete2, delete3){
+    // add
+    navCircle[now].classList.add('now');
+    // Remove
+    navCircle[delete1].classList.remove('now');
+    navCircle[delete2].classList.remove('now');
+    navCircle[delete3].classList.remove('now');
+}

@@ -451,7 +451,7 @@
   /* flex */
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 80px;
 }
 .menu-slider-btn button,
 .menu-slider-btn a {
