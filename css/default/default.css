@@ -11,6 +11,7 @@
   /* color */
   --deep-green: #003700;
   --white-color: #fff;
+  --opacity-white: rgba(255, 255, 255, 0.756);
   --black-color: #000;
   --light-grey: #bbb;
   --opacity-black: rgba(0, 0, 0, 0.737);
@@ -40,6 +41,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+button {
+  background: none;
+  border: none;
 }
 
 ol,
@@ -97,4 +103,15 @@ a {
   padding-left: 20px;
   /* border */
   border-bottom: 2px solid var(--black-color);
+}
+
+.white-title {
+  /* font */
+  color: var(--white-color);
+  /* text */
+  text-align: right;
+  /* padding */
+  padding-right: 20px;
+  /* border */
+  border-bottom: 2px solid var(--white-color);
 }

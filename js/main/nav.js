@@ -5,7 +5,7 @@ const navItemsList = document.querySelectorAll('.nav-item');
 // PC TABLET Nav
 const navCircle = document.querySelectorAll('.circle');
 // POSITION
-const aboutPosition = 456;
+const aboutPosition = 452;
 
 // event for  nav
 toggleBtn.addEventListener('click', ()=>{
