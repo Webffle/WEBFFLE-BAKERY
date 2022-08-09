@@ -134,30 +134,11 @@ function showSlides(n, move) {
     }
   }
 
-  // SWitch for translate
-  switch (sliderItems[slideIndex - 1]) {
-    case sliderItems[0]:
-      sliders.style.transform = `translateX(0px)`;
-      break;
-    case sliderItems[1]:
-      normal = normalSizeArray[1];
+  for(let i = 0; i < sliderItems.length; i++){
+    let sliderItem = sliderItems[slideIndex - 1];
+    if(sliderItem == sliderItems[i]){
+      normal = normalSizeArray[i];
       sliders.style.transform = `translateX(${normal}px)`;
-      break;
-    case sliderItems[2]:
-      normal = normalSizeArray[2];
-      sliders.style.transform = `translateX(${normal}px)`;
-      break;
-    case sliderItems[3]:
-      normal = normalSizeArray[3];
-      sliders.style.transform = `translateX(${normal}px)`;
-      break;
-    case sliderItems[4]:
-      normal = normalSizeArray[4];
-      sliders.style.transform = `translateX(${normal}px)`;
-      break;
-    case sliderItems[5]:
-      normal = normalSizeArray[5];
-      sliders.style.transform = `translateX(${normal}px)`;
-      break;
+    }
   }
 }
