@@ -37,28 +37,28 @@ const next = document.querySelector('.next');
 let nextMove = 0;
 let prevMove = 0;
 
-
+let DefaultSizesArray = [390, 330];
 
 sliderBtn.addEventListener('click', (event) => {
   const target = event.target;
   const move = target.dataset.move;
-  let transform = 390;
-let mobileTransform = 330;
-  if(window.screen.width > 767){
-    movingFunction(move, transform)
+  let transform = DefaultSizesArray[0];
+  let mobileTransform = DefaultSizesArray[1];
+  if (window.screen.width > 767) {
+    movingFunction(move, transform);
   }
-  if(window.screen.width <= 767){
-    movingFunction(move, mobileTransform)
+  if (window.screen.width <= 767) {
+    movingFunction(move, mobileTransform);
   }
 });
 
-function movingFunction(movingArrow, transform){
-    if (movingArrow === 'next') {
-        nextSlide(transform);
-      }
-      if (movingArrow === 'prev') {
-        prevSlide(transform);
-      }
+function movingFunction(movingArrow, transform) {
+  if (movingArrow === 'next') {
+    nextSlide(transform);
+  }
+  if (movingArrow === 'prev') {
+    prevSlide(transform);
+  }
 }
 
 // Slide default index
@@ -74,59 +74,73 @@ function prevSlide(move) {
   console.log(slideIndex);
 }
 
-
 function showSlides(n, move) {
   // Default
-  let pcDefaultSize = 390;
-  let mobileDefaultSize = 330;
+  let pcDefaultSize = DefaultSizesArray[0];
+  let mobileDefaultSize = DefaultSizesArray[1];
   // Size Setting
   let normalSizeArray = [];
   // Slider
-  if (window.screen.width > 767){
+  if (window.screen.width > 767) {
     for (let i = 0; i < sliderItems.length; i++) {
-        normalSizeArray[0] = 0;
-        normalSizeArray[1] = 390;
-        // sum
-        pcDefaultSize += move;
-        normalSizeArray[i + 2] = pcDefaultSize;
-        console.log(normalSizeArray);
+      normalSizeArray[0] = 0;
+      normalSizeArray[1] = DefaultSizesArray[0];
+      // sum
+      pcDefaultSize += move;
+      normalSizeArray[i + 2] = pcDefaultSize;
+      console.log(normalSizeArray);
     }
-   }
-   if (window.screen.width <= 767 ){
+  }
+  if (window.screen.width <= 767) {
     for (let i = 0; i < sliderItems.length; i++) {
-        normalSizeArray[0] = 0;
-        normalSizeArray[1] = 330;
-        // sum
-        mobileDefaultSize += move;
-        normalSizeArray[i + 2] = mobileDefaultSize;
-        console.log(normalSizeArray);
+      normalSizeArray[0] = 0;
+      normalSizeArray[1] = DefaultSizesArray[1];
+      // sum
+      mobileDefaultSize += move;
+      normalSizeArray[i + 2] = mobileDefaultSize;
+      console.log(normalSizeArray);
     }
-   }
+  }
   // Default Size Variable for switch
   let normal = normalSizeArray[0];
+
+
   // MIN
-  if (n < 1) {
-    slideIndex = sliderItems.length;
+  if (window.screen.width > 767) {
+    if (n < 1) {
+      slideIndex = sliderItems.length - 1;
+    }
   }
-  // PC MAX
   if (window.screen.width <= 767) {
-    if (n >= (sliderItems.length + 1)) {
-        slideIndex = 1;
+    if (n < 1) {
+      slideIndex = sliderItems.length;
     }
   }
-  if (window.screen.width > 767){
-    if (n >= (sliderItems.length - 1 )) {
-        slideIndex = 1;
+
+  // MAX
+  if (window.screen.width <= 767) {
+    if (n >= sliderItems.length + 1) {
+      slideIndex = 1;
     }
   }
-  
+  if (window.screen.width > 767) {
+    if (n >= sliderItems.length ) {
+      slideIndex = 1;
+    }
+  }
+  if (window.screen.width > 1200) {
+    if (n >= sliderItems.length - 1 ) {
+      slideIndex = 1;
+    }
+  }
+
   // SWitch for translate
   switch (sliderItems[slideIndex - 1]) {
     case sliderItems[0]:
-        sliders.style.transform = `translateX(0px)`;
+      sliders.style.transform = `translateX(0px)`;
       break;
     case sliderItems[1]:
-        normal = normalSizeArray[1]
+      normal = normalSizeArray[1];
       sliders.style.transform = `translateX(${normal}px)`;
       break;
     case sliderItems[2]:

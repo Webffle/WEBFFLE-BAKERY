@@ -381,7 +381,7 @@
   /* position */
   position: relative;
   /* flex */
-  align-items: center;
+  align-items: flex-end;
   /* overflow */
   overflow-x: hidden;
 }
@@ -458,6 +458,7 @@
   font-family: var(--font-main);
   /* padding */
   padding-top: 40px;
+  padding-right: 20px;
   /* flex */
   display: flex;
   align-items: center;
@@ -471,7 +472,7 @@
 .prev,
 .next {
   /* font */
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   /* cursor */
   cursor: pointer;
 }
@@ -483,7 +484,7 @@
 
 .menu-slider-btn a {
   /* font */
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 /* REPONSIVE */
@@ -517,7 +518,7 @@
   .sliderBox {
     /* szie */
     width: 100%;
-    height: 400px;
+    height: 360px;
   }
   .menu-slider-wrapper {
     /* transform */
