@@ -371,7 +371,15 @@
   justify-content: flex-start;
 }
 
+.sliderBox {
+  /* szie */
+  width: 100%;
+  height: 290px;
+}
+
 .menu-wrapper {
+  /* position */
+  position: relative;
   /* flex */
   align-items: center;
   /* overflow */
@@ -379,14 +387,16 @@
 }
 
 .menu-slider-wrapper {
+  /* position */
+  position: absolute;
+  right: 0;
   /* padding */
   padding-top: 20px;
   /* flex */
   display: flex;
   align-items: center;
   gap: 50px;
-  /* transform */
-  transform: translateX(-40px);
+  /* transition*/
   transition: all 0.3s ease-in-out;
 }
 
@@ -396,8 +406,8 @@
   /* position */
   position: relative;
   /* size */
-  width: 340px;
-  height: 340px;
+  width: 280px;
+  height: 280px;
   /* cursor */
   cursor: pointer;
   /* overflow */
@@ -500,6 +510,24 @@
   #about-svg {
     /* size */
     width: 70%;
+  }
+  /* Menu
+  ================================== */
+
+  .sliderBox {
+    /* szie */
+    width: 100%;
+    height: 400px;
+  }
+  .menu-slider-wrapper {
+    /* transform */
+    transform: translateX(0);
+    transition: all 0.3s ease-in-out;
+  }
+  .slider-item {
+    /* size */
+    width: 340px;
+    height: 340px;
   }
 }
 
