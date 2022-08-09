@@ -34,9 +34,6 @@ const sliders = document.querySelector('.menu-slider-wrapper');
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
-let nextMove = 0;
-let prevMove = 0;
-
 let DefaultSizesArray = [390, 330];
 
 sliderBtn.addEventListener('click', (event) => {
@@ -44,14 +41,17 @@ sliderBtn.addEventListener('click', (event) => {
   const move = target.dataset.move;
   let transform = DefaultSizesArray[0];
   let mobileTransform = DefaultSizesArray[1];
+//  Tablet PC
   if (window.screen.width > 767) {
     movingFunction(move, transform);
   }
+//  Mobile
   if (window.screen.width <= 767) {
     movingFunction(move, mobileTransform);
   }
 });
 
+// Moving Function
 function movingFunction(movingArrow, transform) {
   if (movingArrow === 'next') {
     nextSlide(transform);
