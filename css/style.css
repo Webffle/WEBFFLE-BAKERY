@@ -227,7 +227,7 @@
   /* padding */
   padding: 15px 10px;
   /* border */
-  border-bottom: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--grey);
 }
 
 /* table Max text length */
@@ -596,12 +596,149 @@
   /* flex */
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
-/* REPONSIVE */
+.contact-info-l,
+.contact-info-r {
+  /* size */
+  width: 100%;
+}
 
+.contact-info-item {
+  /* size */
+  width: 100%;
+  /* flex */
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 10px;
+  /* padding */
+  margin-bottom: 20px;
+}
+
+.contact-info-item > input {
+  /* size */
+  width: 100%;
+  height: 35px;
+  /* border */
+  border: none;
+  border-bottom: 1px solid var(--deep-green);
+}
+
+.contact-info-item > label {
+  /* position */
+  position: relative;
+  /* display */
+  display: inline-block;
+  /* size */
+  width: 20px;
+  height: 20px;
+  /* border */
+  border: 1px solid var(--black-color);
+}
+
+.contact-info-item > label > i {
+  /* display */
+  display: none;
+  /* font */
+  font-size: 1.5rem;
+  color: var(--deep-green);
+  /* position */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform */
+  transform: translate(-45%, -60%);
+}
+
+.contact-info-item > input:valid ~ label > i {
+  display: block;
+}
+
+/* contents */
+.contact-textarea-wrapper {
+  /* size */
+  width: 100%;
+  /* padding */
+  padding: 40px 0;
+  /* flex */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-textarea-wrapper > label {
+  /* font */
+  font-family: var(--font-main);
+  font-size: 1.6rem;
+  color: var(--deep-green);
+}
+
+.contact-textarea-wrapper > textarea {
+  /* size */
+  width: 100%;
+  height: 200px;
+  /* padding */
+  padding: 10px;
+  /* resize */
+  resize: none;
+}
+
+.send {
+  background-color: var(--deep-green);
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  color: var(--white-color);
+  display: flex;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: 0.75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 260px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.send:focus {
+  outline: 0;
+}
+
+.send:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.send:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  .send {
+    padding: 0.75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* REPONSIVE */
 @media screen and (min-width: 767px) {
   /* Home 
   ===================================*/
@@ -642,6 +779,19 @@
     /* size */
     width: 340px;
     height: 340px;
+  }
+  /* Contact
+  ================================== */
+  .contact-info-l,
+  .contact-info-r {
+    /* size */
+    width: 45%;
+    /* text */
+    text-align: center;
+  }
+  .contact-info-item > input {
+    /* size */
+    width: 100%;
   }
 }
 

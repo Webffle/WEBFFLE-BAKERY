@@ -13,7 +13,8 @@
   --white-color: #fff;
   --opacity-white: rgba(255, 255, 255, 0.756);
   --black-color: #000;
-  --light-grey: #bbb;
+
+  --grey: #bbb;
   --opacity-black: rgba(0, 0, 0, 0.737);
   /* font weight */
   --weight-light: 300;
@@ -114,4 +115,15 @@ a {
   padding-right: 20px;
   /* border */
   border-bottom: 2px solid var(--white-color);
+}
+
+/* Footer
+================================================ */
+#footer {
+  /* size */
+  width: 100%;
+  /* padding */
+  padding: 40px 0;
+  /* background */
+  background-color: var(--grey);
 }
