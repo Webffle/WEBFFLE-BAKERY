@@ -487,6 +487,119 @@
   font-size: 1.5rem;
 }
 
+/* Contact
+======================================= */
+#contact {
+  /* padding */
+  padding: 100px 0;
+  /* margin */
+  margin: 0 auto;
+  /* flex */
+  align-items: center;
+}
+
+.contact-title {
+  /* font */
+  color: var(--deep-green);
+  /* text */
+  text-align: center;
+  /* border */
+  border: none;
+}
+
+.line-wrapper {
+  /* position */
+  position: relative;
+  /* padding */
+  padding-top: 20px;
+  /* flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.smallBall,
+.bigBall {
+  /* display */
+  display: inline-block;
+  /* background */
+  background-color: var(--deep-green);
+  /* border */
+  border-radius: 50%;
+}
+.smallBall {
+  /* size */
+  width: 15px;
+  height: 15px;
+}
+.bigBall {
+  /* size */
+  width: 30px;
+  height: 30px;
+}
+.header-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  /* position */
+  position: absolute;
+  /* background */
+  background-color: var(--deep-green);
+}
+
+.contact-inputs-wrapper {
+  /* max-width */
+  max-width: 1200px;
+  /* size */
+  width: 90%;
+  /* flex */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.agree-wrapper {
+  /* size */
+  width: 100%;
+  /* text */
+  text-align: center;
+  /* padding */
+  padding-top: 20px;
+}
+.agree-wrapper > textarea {
+  /* size */
+  width: 100%;
+  height: 200px;
+  /* resize */
+  resize: none;
+}
+
+.agree-check-wrapper {
+  /* display */
+  display: block;
+  /* padding */
+  padding-top: 15px;
+}
+
+.agree-check-wrapper > label,
+.agree-check-wrapper > input {
+  /* cursor */
+  cursor: pointer;
+}
+
+.contact-info {
+  /* size */
+  width: 100%;
+  /* padding */
+  padding-top: 40px;
+  /* flex */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 /* REPONSIVE */
 
 @media screen and (min-width: 767px) {

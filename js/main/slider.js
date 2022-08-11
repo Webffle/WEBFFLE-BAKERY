@@ -104,7 +104,6 @@ function showSlides(n, move) {
   // Default Size Variable for switch
   let normal = normalSizeArray[0];
 
-
   // MIN
   if (window.screen.width > 767) {
     if (n < 1) {

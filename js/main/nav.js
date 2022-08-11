@@ -18,6 +18,7 @@ toggleBtn.addEventListener('click', ()=>{
 // POSITION
 const aboutPosition = 452;
 const menuPosition = 1154;
+const contactPosition = 1870;
 
 window.addEventListener('scroll',()=>{
     let scrollValue = window.scrollY;
@@ -30,7 +31,9 @@ window.addEventListener('scroll',()=>{
     if(scrollValue >= menuPosition){
         navCircleNowToggle(2, 0, 1, 3);
     }
-    console.log(scrollValue)
+    if(scrollValue >= contactPosition){
+        navCircleNowToggle(3, 0, 1, 2);
+    }
 });
 
 function navCircleNowToggle(now, delete1, delete2, delete3){
