@@ -14,7 +14,7 @@
   --opacity-white: rgba(255, 255, 255, 0.756);
   --black-color: #000;
   --light-grey: rgb(229, 229, 229);
-  --grey: #bbb;
+  --grey: rgb(162, 162, 162);
   --opacity-black: rgba(0, 0, 0, 0.737);
   /* font weight */
   --weight-light: 300;
@@ -120,10 +120,70 @@ a {
 /* Footer
 ================================================ */
 #footer {
+  /* font */
+  font-family: var(--font-info);
   /* size */
   width: 100%;
   /* padding */
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 20px;
   /* background */
   background-color: var(--grey);
+}
+
+.footer-wrapper {
+  /* flex */
+  align-items: center;
+  /* margin */
+  margin: 0 auto;
+}
+
+.footer-nav {
+  /* size */
+  width: 100%;
+  /* flex */
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.footer-nav > a {
+  /* font */
+  font-size: 0.8rem;
+  color: var(--light-grey);
+}
+
+.footer-nav > div {
+  /* size */
+  width: 1px;
+  height: 20px;
+  background-color: var(--light-grey);
+}
+
+/* Ceo */
+.footer-wrapper > p:nth-of-type(1) {
+  /* font */
+  font-size: 1.2rem;
+  font-weight: var(--weight-regular);
+  color: var(--white-color);
+  /* size */
+  width: 100%;
+  /* padding */
+  padding: 20px 0;
+}
+
+/* copyright */
+.footer-wrapper > p:nth-of-type(2) {
+  /* font */
+  font-size: 0.9rem;
+  color: var(--opacity-white);
+  /* padding */
+  padding-top: 30px;
+}
+
+.footer-wrapper > ul {
+  /* size */
+  width: 100%;
+  /* font */
+  font-size: 0.9rem;
+  color: var(--light-grey);
 }
